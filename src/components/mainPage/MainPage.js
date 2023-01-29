@@ -8,11 +8,11 @@ export default function MainPage() {
     const [theme, setTheme] = useState('dark');
 
     const [score, setScore] = useState(-1);
-    const [highestScore, setHighestScore] = useState(100);
+    const [highestScore, setHighestScore] = useState(0);
 
     return (
         (page === 'home') ?
             <HomePage theme={theme} score={score} highestScore={highestScore} setTheme={setTheme} setPage={setPage}/> :
-            <FlagItem theme={theme} score={score}/>
+            <FlagItem theme={theme} highestScore={highestScore} setScore={setScore} setHighestScore={setHighestScore} setPage={setPage}/>
     );
 }

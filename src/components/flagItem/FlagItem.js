@@ -4,9 +4,9 @@ import createStyles from "./FlagItemStyles";
 
 import {useEffect, useState} from "react";
 
-const FlagItem = () => {
+const FlagItem = ({theme, setScore, setHighestScore, highestScore, setPage}) => {
     const URL = `https://countryflagsapi.com/png/`;
-    const styles = createStyles('dark');
+    const styles = createStyles(theme);
 
     const statusStyles = [styles.simple, styles.chosen, styles.correct, styles.wrong];
 
@@ -29,8 +29,20 @@ const FlagItem = () => {
                 makeOptionsList(tempCountry);
                 setPressable(true);
             }
-        }, 1000);
+        }, 700);
     }, [chosenOption]);
+
+    useEffect(() => {
+        if(mistakes > 2) {
+            setTimeout(() => {
+                if(count > highestScore) {
+                    setHighestScore(count);
+                }
+                setScore(count);
+                setPage('home');
+            }, 700)
+        }
+    }, [mistakes])
 
     const chooseOptionHandler = (name) => {
         setOptions(prevState => {
@@ -71,8 +83,6 @@ const FlagItem = () => {
         }
         setOptions(countryOptions.sort((x, y) => (x.name > y.name)))
     }
-
-
 
     return (
         <View style={styles.container}>
