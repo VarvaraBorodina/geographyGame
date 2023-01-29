@@ -7,6 +7,7 @@ export const setHighScore = async (score) => {
 export const getHighScore = async () => {
     let highScore = await AsyncStorage.getItem("highScore");
     if(!highScore){
+        await AsyncStorage.setItem("highScore", JSON.stringify(0));
         highScore = 0;
     }
     return highScore;

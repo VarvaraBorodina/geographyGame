@@ -3,6 +3,7 @@ import countries from "../../api/countries";
 import createStyles from "./FlagItemStyles";
 
 import {useEffect, useState} from "react";
+import {setHighScore} from "../../storage/asyncStorage";
 
 const FlagItem = ({theme, setScore, setHighestScore, highestScore, setPage}) => {
     const URL = `https://countryflagsapi.com/png/`;
@@ -37,6 +38,7 @@ const FlagItem = ({theme, setScore, setHighestScore, highestScore, setPage}) => 
             setTimeout(() => {
                 if(count > highestScore) {
                     setHighestScore(count);
+                    setHighScore(count);
                 }
                 setScore(count);
                 setPage('home');

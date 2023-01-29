@@ -8,8 +8,10 @@ export default function MainPage() {
     const [page, setPage] = useState('home');
     const [theme, setTheme] = useState('dark');
 
+    getHighScore().then(data=>setHighestScore(+data));
+
     const [score, setScore] = useState(-1);
-    const [highestScore, setHighestScore] = useState(getHighScore());
+    const [highestScore, setHighestScore] = useState(0);
 
     return (
         (page === 'home') ?
