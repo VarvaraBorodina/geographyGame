@@ -71,6 +71,8 @@ const FlagItem = () => {
         setOptions(countryOptions.sort((x, y) => (x.name > y.name)))
     }
 
+
+
     return (
         <View style={styles.container}>
             <View style={styles.wrapper}>
