@@ -1,6 +1,7 @@
 import {useState} from "react";
 import HomePage from "../homePage/HomePage";
 import FlagItem from "../flagItem/FlagItem";
+import {getHighScore} from "../../storage/asyncStorage";
 
 export default function MainPage() {
 
@@ -8,7 +9,7 @@ export default function MainPage() {
     const [theme, setTheme] = useState('dark');
 
     const [score, setScore] = useState(-1);
-    const [highestScore, setHighestScore] = useState(0);
+    const [highestScore, setHighestScore] = useState(getHighScore());
 
     return (
         (page === 'home') ?
