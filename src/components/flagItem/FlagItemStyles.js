@@ -1,35 +1,9 @@
 import {StyleSheet} from "react-native";
-
-const themes = {
-    light: {
-        mainBackgroundColor: '#f3f3fc',
-        mainColor:'#000000',
-        wrapperShadowColor: "#696969",
-        dotShadowColor: "#262626",
-        dotEnableBackgroundColor: '#50507722',
-        dotEnableColor: '#505077',
-        optionTextShadowColor:  "#343434",
-        chosenBackgroundColor: '#e6e6f5',
-        correctBackgroundColor: '#5fb683',
-        wrongBackgroundColor: '#ed4a74',
-    },
-    dark: {
-        mainBackgroundColor: '#2c2c5c',
-        mainColor:'#ffffff',
-        wrapperShadowColor: "#000000",
-        dotShadowColor: "#000000",
-        dotEnableBackgroundColor: 'rgba(3,3,3,0.2)',
-        dotEnableColor: '#ffffff',
-        optionTextShadowColor:  "#000000",
-        chosenBackgroundColor: '#23234a',
-        correctBackgroundColor: '#5fb683',
-        wrongBackgroundColor: '#ed4a74',
-    },
-}
-
+import COLORS from "../../colors/color";
 const createStyles = (theme) => {
 
-    const {mainBackgroundColor,
+    const {
+        mainBackgroundColor,
         mainColor,
         wrapperShadowColor,
         dotShadowColor,
@@ -39,7 +13,7 @@ const createStyles = (theme) => {
         chosenBackgroundColor,
         correctBackgroundColor,
         wrongBackgroundColor,
-    } = themes[theme];
+    } = COLORS[theme];
     
     return StyleSheet.create({
         container: {
@@ -174,4 +148,4 @@ const createStyles = (theme) => {
     });
 }
 
-export default createStyles('dark');
+export default createStyles;

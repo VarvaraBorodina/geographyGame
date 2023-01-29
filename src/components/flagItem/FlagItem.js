@@ -1,11 +1,12 @@
 import {Text, View, Image, FlatList, Pressable} from 'react-native';
 import countries from "../../api/countries";
-import styles from "./FlagItemStyles";
+import createStyles from "./FlagItemStyles";
 
 import {useEffect, useState} from "react";
 
 const FlagItem = () => {
     const URL = `https://countryflagsapi.com/png/`;
+    const styles = createStyles('dark');
 
     const statusStyles = [styles.simple, styles.chosen, styles.correct, styles.wrong];
 
