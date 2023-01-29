@@ -174,6 +174,4 @@ const createStyles = (theme) => {
     });
 }
 
-
-
-export default createStyles('light');
+export default createStyles('dark');
