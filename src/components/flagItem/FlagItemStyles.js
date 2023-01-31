@@ -23,7 +23,7 @@ const createStyles = (theme) => {
             backgroundColor: mainBackgroundColor,
         },
         wrapper: {
-            flex: 1,
+            height:500,
             alignItems: 'center',
             justifyContent: 'center',
             width: '90%',
@@ -100,7 +100,7 @@ const createStyles = (theme) => {
         image: {
             width: 320,
             height: 200,
-            marginTop: 30,
+            marginTop: 20,
             marginBottom: 20,
             borderWidth: 10,
             borderColor: mainBackgroundColor,
@@ -115,11 +115,11 @@ const createStyles = (theme) => {
         option__text: {
             width: 280,
 
-            paddingVertical: 10,
+            paddingVertical: 8,
             marginVertical: 10,
 
             textAlign: 'center',
-            fontSize: 18,
+            fontSize: 16,
             borderRadius: 10,
 
             shadowColor:  optionTextShadowColor,

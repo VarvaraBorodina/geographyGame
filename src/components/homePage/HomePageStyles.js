@@ -19,7 +19,7 @@ const createStyles = (theme) => {
         },
 
         wrapper: {
-            flex: 1,
+            height:600,
             alignItems: 'center',
             width: '90%',
             marginTop: 100,

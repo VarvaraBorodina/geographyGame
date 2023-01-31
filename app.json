@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "reactNativeTest",
+    "name": "Flags",
     "slug": "reactNativeTest",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/planet.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/planet.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,12 +22,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/planet.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.dashaborodina.reactNativeTest"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "69075c46-7fbe-4aee-b899-8d444ea792b1"
+      }
     }
   }
 }
