@@ -97,20 +97,20 @@ const createStyles = (theme) => {
             elevation: 24,
         },
 
-        theme: {
-            width: "90%",
+        footer__section: {
             flex: 1,
             flexDirection: "row",
             marginTop: 40,
             justifyContent: "space-around",
+            paddingHorizontal: 30,
         },
 
         img: {
-            height: 60,
-            width: 60,
+            height: 45,
+            width: 45,
             alignItems: "center",
             justifyContent: "center",
-            borderRadius: 65,
+            borderRadius: 45,
             backgroundColor: mainBackgroundColor,
 
             shadowColor: imageShadowColor,
@@ -123,6 +123,13 @@ const createStyles = (theme) => {
 
         hidden: {
             opacity: 0,
+        },
+
+        footer: {
+            flex: 1,
+            flexDirection: "row",
+            marginTop: 40,
+            justifyContent: "space-around",
         }
 
     });

@@ -7,6 +7,7 @@ export default function MainPage() {
 
     const [page, setPage] = useState('home');
     const [theme, setTheme] = useState('dark');
+    const [lang, setLang] = useState('ru');
 
     getHighScore().then(data=>setHighestScore(+data));
 
@@ -15,7 +16,7 @@ export default function MainPage() {
 
     return (
         (page === 'home') ?
-            <HomePage theme={theme} score={score} highestScore={highestScore} setTheme={setTheme} setPage={setPage}/> :
-            <FlagItem theme={theme} highestScore={highestScore} setScore={setScore} setHighestScore={setHighestScore} setPage={setPage}/>
+            <HomePage theme={theme} score={score} highestScore={highestScore} lang={lang} setTheme={setTheme} setPage={setPage} setLang={setLang}/> :
+            <FlagItem theme={theme} highestScore={highestScore} setScore={setScore} setHighestScore={setHighestScore} setPage={setPage} lang={lang}/>
     );
 }
